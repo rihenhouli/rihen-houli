@@ -183,8 +183,29 @@ function ProjectCard({ project: p }: { project: (typeof projects)[number] }) {
           </li>
         ))}
       </ul>
-      <div className="mt-3 font-mono text-[10px] text-muted">
-        {p.role} · {p.year}
+      <div className="mt-3 flex flex-wrap items-baseline justify-between gap-3">
+        <span className="font-mono text-[10px] text-muted">
+          {p.role} · {p.year}
+        </span>
+        {p.links && p.links.length > 0 && (
+          <ul className="flex flex-wrap gap-x-3 gap-y-1">
+            {p.links.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`font-mono text-[11px] underline-offset-4 hover:underline ${
+                    l.kind === "live" ? "text-accent" : "text-ink/70 hover:text-accent"
+                  }`}
+                >
+                  {l.kind === "live" ? "↗ " : ""}
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </article>
   );

@@ -1,3 +1,9 @@
+export type ProjectLink = {
+  label: string;
+  href: string;
+  kind: "live" | "code";
+};
+
 export type Project = {
   slug: string;
   name: string;
@@ -7,7 +13,7 @@ export type Project = {
   stack: string[];
   highlights: string[];
   category: "Product" | "Internal Tool" | "AI";
-  href?: string;
+  links?: ProjectLink[];
 };
 
 export const projects: Project[] = [
@@ -25,6 +31,9 @@ export const projects: Project[] = [
       "End-to-end creator onboarding and campaign delivery APIs.",
     ],
     category: "Product",
+    links: [
+      { label: "Live", href: "https://auth-factory.tawa.digital", kind: "live" },
+    ],
   },
   {
     slug: "e-contractar",
@@ -40,6 +49,11 @@ export const projects: Project[] = [
       "Admin dashboard with charts and operational metrics.",
     ],
     category: "Product",
+    links: [
+      { label: "Backend", href: "https://github.com/rihenhouli/e_contractor_Backend", kind: "code" },
+      { label: "Admin", href: "https://github.com/rihenhouli/e_contractor_admin", kind: "code" },
+      { label: "Frontend", href: "https://github.com/rihenhouli/e_contractar_frontend", kind: "code" },
+    ],
   },
   {
     slug: "e-contractar-ai",
@@ -55,6 +69,9 @@ export const projects: Project[] = [
       "Adaptive interview screener that generates and grades 5-8 role-specific questions.",
     ],
     category: "AI",
+    links: [
+      { label: "Code", href: "https://github.com/rihenhouli/e-contractar-ai", kind: "code" },
+    ],
   },
   {
     slug: "bitbox",
@@ -68,6 +85,11 @@ export const projects: Project[] = [
       "Role-aware UI with shared design tokens across surfaces.",
     ],
     category: "Product",
+    links: [
+      { label: "Backend", href: "https://github.com/rihenhouli/bitbox-backend", kind: "code" },
+      { label: "Dashboard", href: "https://github.com/rihenhouli/bitbox-dashboard", kind: "code" },
+      { label: "Management", href: "https://github.com/rihenhouli/bitbox-management", kind: "code" },
+    ],
   },
   {
     slug: "ants",
