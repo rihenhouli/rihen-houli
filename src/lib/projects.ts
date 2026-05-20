@@ -14,6 +14,10 @@ export type Project = {
   highlights: string[];
   category: "Product" | "Internal Tool" | "AI";
   links?: ProjectLink[];
+  /** Public path to a 16:9 screenshot, e.g. "/projects/tawa.png". When unset, the card shows a gradient placeholder. */
+  image?: string;
+  /** If true, a "Read more" link points to /projects/[slug]. */
+  hasDetail?: boolean;
 };
 
 export const projects: Project[] = [
@@ -72,17 +76,20 @@ export const projects: Project[] = [
     links: [
       { label: "Code", href: "https://github.com/rihenhouli/e-contractar-ai", kind: "code" },
     ],
+    hasDetail: true,
   },
   {
     slug: "bitbox",
     name: "BitBox",
-    tagline: "Backend, dashboard, and management console for a digital-asset workflow.",
-    role: "Full Stack Engineer",
+    tagline:
+      "Built end-to-end: REST API, customer dashboard, and operator console for a digital-asset workflow.",
+    role: "Full Stack Engineer · built from zero",
     year: "2023",
-    stack: ["Node.js", "Angular", "REST"],
+    stack: ["Express.js", "Sequelize", "Socket.io", "Vue 3", "Vite", "PostgreSQL"],
     highlights: [
-      "Three-tier split: API backend, operator dashboard, internal management.",
-      "Role-aware UI with shared design tokens across surfaces.",
+      "Three-tier split coded from scratch: API backend, customer dashboard, internal management.",
+      "Realtime updates over Socket.io between operator and customer surfaces.",
+      "Role-aware UI with shared design tokens across both Vue 3 frontends.",
     ],
     category: "Product",
     links: [
@@ -95,14 +102,14 @@ export const projects: Project[] = [
     slug: "ants",
     name: "ANTS — Education Management",
     tagline:
-      "Multi-platform education system built to serve 10k+ students across web and mobile.",
-    role: "Full Stack Web Developer",
+      "Multi-platform education system serving 10k+ students. Designed the REST API + MySQL schema and built 500+ reusable cross-platform components.",
+    role: "Full Stack Web Developer · core author",
     year: "2022 — 2023",
     stack: ["Spring Boot", "NestJS", "React", "React Native", "MySQL"],
     highlights: [
-      "500+ reusable components with consistent cross-platform state.",
-      "Scalable REST APIs and MySQL schemas for a 10k-student footprint.",
-      "Mentored 3 interns and led API testing in Postman.",
+      "Designed scalable REST APIs and MySQL schemas from scratch for a 10k-student footprint.",
+      "Built 500+ reusable components with consistent state shared across web + React Native.",
+      "Led API testing in Postman; mentored 3 interns through onboarding.",
     ],
     category: "Product",
   },
@@ -110,13 +117,14 @@ export const projects: Project[] = [
     slug: "inventory",
     name: "Inventory Management System",
     tagline:
-      "Full-stack internal tool for tracking products and stock levels — replaced a manual spreadsheet process entirely.",
-    role: "Solo build",
+      "Built from zero: full-stack internal tool for tracking products and stock — replaced a manual spreadsheet process entirely for 20+ users.",
+    role: "Solo build · from zero",
     year: "2021",
     stack: ["Angular", "Express.js", "MongoDB"],
     highlights: [
-      "Built from scratch for 20+ users, 99% uptime on Windows Server.",
+      "Designed schema, REST API, and Angular UI end-to-end — no inherited code.",
       "Replaced a fragile spreadsheet workflow with structured CRUD + reporting.",
+      "Deployed on Windows Server, maintained 99% uptime for 20+ users.",
     ],
     category: "Internal Tool",
   },
