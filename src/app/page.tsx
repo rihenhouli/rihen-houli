@@ -230,9 +230,16 @@ function ProjectCard({ project: p }: { project: (typeof projects)[number] }) {
 }
 
 function ProjectThumb({ project: p }: { project: (typeof projects)[number] }) {
-  if (p.images && p.images.length > 0) {
-    return <ScreenshotCarousel images={p.images} alt={p.name} />;
-  }
+if (p.images && p.images.length > 0) {
+  return (
+    <ScreenshotCarousel
+      images={p.images}
+      alt={p.name}
+      title={p.name}
+      description={p.tagline}
+    />
+  );
+}
 
   if (p.image) {
     return (
