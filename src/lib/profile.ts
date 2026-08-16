@@ -1,13 +1,51 @@
 export const profile = {
   name: "Rihen Houli",
-  title: "Full Stack Engineer",
+  title: "Full Stack Engineer & Tech Lead",
   location: "Tunis, Tunisia",
   email: "rihenhoulii@gmail.com",
   phone: "+216 50 667 525",
   github: "https://github.com/rihenhouli",
   linkedin: "https://linkedin.com/in/rihen-houli",
+  
+  // 🎯 Relocation preferences (add this)
+  relocation: {
+    openToRelocation: true, // Set to false if not open
+    preferredLocations: ["Remote", "Europe", "UAE", "Canada", "USA", "UK", "Qatar" ],
+    visaStatus: "EU/UK visa sponsorship eligible",
+    noticePeriod: "1 month",
+  },
+  
+  // ⚡ SEO & Social Sharing
+  seo: {
+    title: "Rihen Houli — Full Stack Engineer & Tech Lead | 6+ Years Experience | Open to Relocation",
+    description:
+      "Full Stack Engineer & Tech Lead with 6+ years building scalable platforms. Open to relocation worldwide. Expert in Node.js, React, Vue.js, TypeScript, and cloud architecture.",
+    keywords: [
+      "Full Stack Engineer",
+      "Tech Lead",
+      "Node.js Developer", 
+      "React Developer",
+      "Vue.js Developer",
+      "TypeScript",
+      "System Architecture",
+      "Product Development",
+      "Open to Relocation",
+      "Tunisia",
+      "Remote Work",
+    ],
+  },
+
+  // 💼 Elevator Pitch
+  tagline:
+    "I build products from zero to scale. Tech Lead & Full Stack Engineer with 6+ years of experience. Open to relocation worldwide.",
+
+  // 📝 Professional Summary
   summary:
-    "Full Stack Engineer with 6 years building web platforms end to end — not just shipping tickets, but owning the architecture, the technical decisions, and the product outcome. As tech lead on TAWA Digital Factory, on Aprilium's ANTS education platform, and as Tech lead and Project Manager of BitBoxGames.tn, I've repeatedly taken products from zero: designing the data model, choosing the stack, building the internal tooling that keeps a team fast, and staying accountable for what ships. Core stack: Node.js, NestJS, Express.js, Vue.js, React, Angular, TypeScript, PostgreSQL, Supabase, Docker.",
+    "I'm a Full Stack Engineer and Tech Lead who owns products end-to-end — from database architecture and system design to deployment and team mentorship. I don't just write code; I build the technical foundation that enables products to scale, teams to move fast, and users to have seamless experiences.\n\n" +
+    "Currently serving as Tech Lead on multiple products: BitBoxGames.tn (booking platform, in-room client app, staff admin console), TAWA Digital Factory (3K+ creators, 100+ campaigns), and previously led the database architecture and technical decisions for ANTS (10K+ students).\n\n" +
+    "I specialize in taking products from zero to production: designing the data model, choosing the right stack, building internal tooling that keeps teams efficient, and ensuring technical decisions align with business outcomes. My core stack includes Node.js, NestJS, Express.js, Vue.js, React, Angular, TypeScript, PostgreSQL, Supabase, and Docker.\n\n" +
+    "🌍 Open to relocation: I'm excited about opportunities in Europe, UAE, Canada, USA, UK, Qatar or remote-first teams. I'm eligible for visa sponsorship and have a 1-month notice period.\n\n" +
+    "Beyond code, I'm passionate about mentoring junior engineers, driving technical decisions that actually ship, and building products that solve real problems.",
 };
 
 export const experience = [
@@ -17,7 +55,7 @@ export const experience = [
     period: "2025 – Present",
     location: "Tunis, Tunisia · Remote",
     bullets: [
-      "Led and Built BitBoxGames.tn end-to-end as sole engineer and product owner — a karaoke-venue platform covering public booking, in-room client experience, and staff operations.",
+      "Led and built BitBoxGames.tn end-to-end as sole engineer and product owner — a karaoke-venue platform covering public booking, in-room client experience, and staff operations.",
       "Shipped a public multi-step booking wizard on Supabase (Auth, Edge Functions, RLS policies) with slot-blocking logic and Resend-powered booking confirmation emails.",
       "Built BitBox Karaoke, a real-time in-room client app on Supabase Realtime: session-end countdowns, instant staff-help requests, and in-session coffee ordering.",
       "Built BitBox Admin, an RBAC-gated internal platform for staff to manage bookings (with filters and confirmations), karaoke rooms, games, and coffee inventory.",
