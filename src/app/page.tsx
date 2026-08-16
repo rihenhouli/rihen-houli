@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { profile, experience, education, skills } from "@/lib/profile";
 import { projects } from "@/lib/projects";
+import { ScreenshotCarousel } from "@/components/ScreenshotCarousel";
 
 export default function Page() {
   return (
@@ -137,8 +138,10 @@ function Hero() {
         {profile.name}
       </h1>
       <p className="mt-5 max-w-2xl text-lg text-ink/70">
-        I build web platforms and REST APIs end-to-end — Node.js, NestJS, Vue, React,
-        Angular, Spring Boot. Currently shipping a 3K-creator UGC platform at TAWA.
+        I own products end-to-end — architecture, technical decisions, and delivery —
+        as tech lead on TAWA Digital Factory, on Aprilium&rsquo;s ANTS platform, and as
+        Tech lead and Project Manager of BitBoxGames.tn. Node.js, NestJS, Vue,
+        React, Angular, Supabase.
       </p>
     </header>
   );
@@ -227,6 +230,10 @@ function ProjectCard({ project: p }: { project: (typeof projects)[number] }) {
 }
 
 function ProjectThumb({ project: p }: { project: (typeof projects)[number] }) {
+  if (p.images && p.images.length > 0) {
+    return <ScreenshotCarousel images={p.images} alt={p.name} />;
+  }
+
   if (p.image) {
     return (
       <div className="relative aspect-video w-full overflow-hidden bg-paper">
