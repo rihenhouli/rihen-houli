@@ -29,7 +29,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ProfileImage } from "@/components/ProfileImage";
 
 export default function Page() {
-  const mainRef = useRef<HTMLMainElement>(null);
+  const mainRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: mainRef,
     offset: ["start start", "end start"],
