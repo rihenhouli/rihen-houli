@@ -200,7 +200,7 @@ export default function Page() {
             {/* Key stats/achievements for recruiters */}
             <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
               <div className="rounded-xl border border-border bg-secondary/30 p-4 text-center">
-                <div className="text-2xl font-bold text-gradient">6+</div>
+                <div className="text-2xl font-bold text-gradient">5+</div>
                 <div className="text-xs text-muted-foreground">Years Experience</div>
               </div>
               <div className="rounded-xl border border-border bg-secondary/30 p-4 text-center">

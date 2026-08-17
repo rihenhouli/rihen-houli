@@ -17,9 +17,9 @@ export const profile = {
   
   // ⚡ SEO & Social Sharing
   seo: {
-    title: "Rihen Houli — Full Stack Engineer & Tech Lead | 6+ Years Experience | Open to Relocation",
+    title: "Rihen Houli — Full Stack Engineer & Tech Lead | 5+ Years Experience | Open to Relocation",
     description:
-      "Full Stack Engineer & Tech Lead with 6+ years building scalable platforms. Open to relocation worldwide. Expert in Node.js, React, Vue.js, TypeScript, and cloud architecture.",
+      "Full Stack Engineer & Tech Lead with 5+ years building scalable platforms. Open to relocation worldwide. Expert in Node.js, React, Vue.js, TypeScript, and cloud architecture.",
     keywords: [
       "Full Stack Engineer",
       "Tech Lead",
@@ -37,7 +37,7 @@ export const profile = {
 
   // 💼 Elevator Pitch
   tagline:
-    "I build products from zero to scale. Tech Lead & Full Stack Engineer with 6+ years of experience. Open to relocation worldwide.",
+    "I build products from zero to scale. Tech Lead & Full Stack Engineer with 5+ years of experience. Open to relocation worldwide.",
 
   // 📝 Professional Summary
   summary:
