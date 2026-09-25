@@ -39,7 +39,9 @@ export default function Page() {
   // Projects pagination state
   const [showAllProjects, setShowAllProjects] = useState(false);
   const INITIAL_PROJECTS = 6;
-  const visibleProjects = showAllProjects ? projects : projects.slice(0, INITIAL_PROJECTS);
+  const visibleProjects = showAllProjects
+    ? projects
+    : projects.slice(0, INITIAL_PROJECTS);
   const hasMoreProjects = projects.length > INITIAL_PROJECTS;
 
   // Split summary into paragraphs for better readability
@@ -57,7 +59,10 @@ export default function Page() {
         className="fixed top-4 left-1/2 z-50 w-full max-w-2xl -translate-x-1/2 px-4"
       >
         <div className="glass rounded-full px-6 py-3 flex items-center justify-between">
-          <Link href="#" className="font-mono font-semibold text-sm tracking-tight">
+          <Link
+            href="#"
+            className="font-mono font-semibold text-sm tracking-tight"
+          >
             <span className="text-gradient">RH.</span>
           </Link>
           <div className="flex items-center gap-4">
@@ -162,9 +167,7 @@ export default function Page() {
                     <Plane className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-sm">
-                      🌍 Open to Relocation
-                    </p>
+                    <p className="font-medium text-sm">🌍 Open to Relocation</p>
                     <p className="text-xs text-muted-foreground">
                       {profile.relocation.preferredLocations.join(" · ")}
                     </p>
@@ -187,11 +190,18 @@ export default function Page() {
         )}
 
         {/* About - Using detailed summary (recruiter-focused) */}
-        <Section id="about" title="About" icon={<Sparkles className="h-4 w-4" />}>
+        <Section
+          id="about"
+          title="About"
+          icon={<Sparkles className="h-4 w-4" />}
+        >
           <MotionWrapper>
             <div className="space-y-4 text-muted-foreground leading-relaxed max-w-4xl">
               {summaryParagraphs.map((paragraph, index) => (
-                <p key={index} className={index === 0 ? "text-lg" : "text-base"}>
+                <p
+                  key={index}
+                  className={index === 0 ? "text-lg" : "text-base"}
+                >
                   {paragraph}
                 </p>
               ))}
@@ -201,19 +211,27 @@ export default function Page() {
             <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
               <div className="rounded-xl border border-border bg-secondary/30 p-4 text-center">
                 <div className="text-2xl font-bold text-gradient">5+</div>
-                <div className="text-xs text-muted-foreground">Years Experience</div>
+                <div className="text-xs text-muted-foreground">
+                  Years Experience
+                </div>
               </div>
               <div className="rounded-xl border border-border bg-secondary/30 p-4 text-center">
                 <div className="text-2xl font-bold text-gradient">3</div>
-                <div className="text-xs text-muted-foreground">Products as Tech Lead</div>
+                <div className="text-xs text-muted-foreground">
+                  Products as Tech Lead
+                </div>
               </div>
               <div className="rounded-xl border border-border bg-secondary/30 p-4 text-center">
                 <div className="text-2xl font-bold text-gradient">10K+</div>
-                <div className="text-xs text-muted-foreground">Users Served</div>
+                <div className="text-xs text-muted-foreground">
+                  Users Served
+                </div>
               </div>
               <div className="rounded-xl border border-border bg-secondary/30 p-4 text-center">
                 <div className="text-2xl font-bold text-gradient">13</div>
-                <div className="text-xs text-muted-foreground">Projects Shipped</div>
+                <div className="text-xs text-muted-foreground">
+                  Projects Shipped
+                </div>
               </div>
             </div>
 
@@ -237,7 +255,11 @@ export default function Page() {
         </Section>
 
         {/* Projects - Show 6 initially, with "Show More" button */}
-        <Section id="projects" title="Projects" icon={<Code2 className="h-4 w-4" />}>
+        <Section
+          id="projects"
+          title="Projects"
+          icon={<Code2 className="h-4 w-4" />}
+        >
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {visibleProjects.map((p, i) => (
               <MotionWrapper key={p.slug} delay={i * 0.05}>
@@ -250,10 +272,11 @@ export default function Page() {
           {hasMoreProjects && (
             <div className="mt-8 text-center">
               <motion.button
+                type="button"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => setShowAllProjects(!showAllProjects)}
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/30 px-6 py-3 text-sm font-medium transition-all hover:bg-secondary hover:border-primary/40"
+                onClick={() => setShowAllProjects((prev) => !prev)}
+                className="relative z-10 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/30 px-6 py-3 text-sm font-medium transition-all hover:bg-secondary hover:border-primary/40"
               >
                 {showAllProjects ? (
                   <>
@@ -272,15 +295,18 @@ export default function Page() {
         </Section>
 
         {/* Experience */}
-        <Section id="experience" title="Experience" icon={<Briefcase className="h-4 w-4" />}>
+        <Section
+          id="experience"
+          title="Experience"
+          icon={<Briefcase className="h-4 w-4" />}
+        >
           <ol className="space-y-10">
             {experience.map((e, i) => (
               <MotionWrapper key={e.company} delay={i * 0.05}>
                 <li>
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="text-lg font-semibold">
-                      {e.role}{" "}
-                      <span className="text-muted-foreground">·</span>{" "}
+                      {e.role} <span className="text-muted-foreground">·</span>{" "}
                       <span className="text-primary">{e.company}</span>
                     </h3>
                     <span className="font-mono text-xs text-muted-foreground">
@@ -330,7 +356,11 @@ export default function Page() {
         </Section>
 
         {/* Education */}
-        <Section id="education" title="Education" icon={<GraduationCap className="h-4 w-4" />}>
+        <Section
+          id="education"
+          title="Education"
+          icon={<GraduationCap className="h-4 w-4" />}
+        >
           <MotionWrapper>
             <ul className="space-y-6">
               {education.map((ed) => (
@@ -344,7 +374,9 @@ export default function Page() {
                       {ed.period}
                     </span>
                   </div>
-                  <p className="mt-1 text-sm text-muted-foreground">{ed.degree}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {ed.degree}
+                  </p>
                 </li>
               ))}
             </ul>
@@ -352,16 +384,24 @@ export default function Page() {
         </Section>
 
         {/* Contact */}
-        <Section id="contact" title="Contact" icon={<Mail className="h-4 w-4" />}>
+        <Section
+          id="contact"
+          title="Contact"
+          icon={<Mail className="h-4 w-4" />}
+        >
           <MotionWrapper>
             <div className="rounded-2xl border border-border bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5 p-8 text-center">
               <Target className="h-12 w-12 text-primary/60 mx-auto mb-4" />
-              <h3 className="text-2xl font-semibold">Let's build something great together</h3>
+              <h3 className="text-2xl font-semibold">
+                Let's build something great together
+              </h3>
               <p className="mt-2 text-muted-foreground max-w-md mx-auto">
-                I'm currently open to Tech Lead, Senior Full Stack, or freelance opportunities.
+                I'm currently open to Tech Lead, Senior Full Stack, or freelance
+                opportunities.
                 {profile.relocation.openToRelocation && (
                   <span className="block mt-1 text-primary">
-                    🌍 Open to relocation to {profile.relocation.preferredLocations.join(", ")}
+                    🌍 Open to relocation to{" "}
+                    {profile.relocation.preferredLocations.join(", ")}
                   </span>
                 )}
               </p>
@@ -412,7 +452,8 @@ export default function Page() {
         {/* Footer */}
         <footer className="mt-24 border-t border-border pt-6 text-xs text-muted-foreground text-center space-y-1">
           <p>
-            © {new Date().getFullYear()} {profile.name} — built with Next.js, Tailwind & Framer Motion.
+            © {new Date().getFullYear()} {profile.name} — built with Next.js,
+            Tailwind & Framer Motion.
           </p>
           <p className="text-muted-foreground/60">
             {profile.relocation.openToRelocation
