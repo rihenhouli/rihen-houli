@@ -229,6 +229,15 @@ export const projects: Project[] = [
         kind: "code",
       },
     ],
+    images: [
+      "/projects/e_contractar-1.png",
+      "/projects/e_contractar-2.png",
+      "/projects/e_contractar-3.png",
+      "/projects/e_contractar-4.png",
+      "/projects/e_contractar-5.png",
+      "/projects/e_contractar-6.png",
+      "/projects/e_contractar-7.png",
+    ],
   },
   {
     slug: "e-contractar-ai",

@@ -1,140 +1,382 @@
 export const profile = {
   name: "Rihen Houli",
-  title: "Full Stack Engineer & Tech Lead",
+
+  title:
+    "Senior Full Stack Engineer | Node.js · TypeScript · NestJS · Express.js · Vue.js",
+
   location: "Tunis, Tunisia",
+
   email: "rihenhoulii@gmail.com",
+
   phone: "+216 50 667 525",
+
   github: "https://github.com/rihenhouli",
-  linkedin: "https://linkedin.com/in/rihen-houli",
-  
-  // 🎯 Relocation preferences (add this)
+
+  linkedin: "https://www.linkedin.com/in/rihen-houli/",
+
+  portfolio: "https://rihen-houli.vercel.app/",
+
+  // ==================== RELOCATION ====================
+
   relocation: {
-    openToRelocation: true, // Set to false if not open
-    preferredLocations: ["Remote", "Europe", "UAE", "Canada", "USA", "UK", "Qatar" ],
-    visaStatus: "EU/UK visa sponsorship eligible",
+    openToRelocation: true,
+
+    preferredLocations: [
+      "Remote",
+      "Europe",
+      "UAE",
+      "Canada",
+      "USA",
+      "UK",
+      "Qatar",
+    ],
+
+    visaStatus: "Open to visa sponsorship",
+
     noticePeriod: "1 month",
   },
-  
-  // ⚡ SEO & Social Sharing
+
+  // ==================== SEO ====================
+
   seo: {
-    title: "Rihen Houli — Full Stack Engineer & Tech Lead | 5+ Years Experience | Open to Relocation",
+    title:
+      "Rihen Houli — Senior Full Stack Engineer | Node.js · TypeScript · NestJS · Vue.js",
+
     description:
-      "Full Stack Engineer & Tech Lead with 5+ years building scalable platforms. Open to relocation worldwide. Expert in Node.js, React, Vue.js, TypeScript, and cloud architecture.",
+      "Senior Full Stack Engineer with nearly 6 years of experience building and scaling production platforms. Specialized in Node.js, TypeScript, NestJS, Express.js, Vue.js, React and PostgreSQL. Open to remote, hybrid and relocation opportunities.",
+
     keywords: [
+      "Senior Full Stack Engineer",
       "Full Stack Engineer",
+      "Software Engineer",
+      "Product Engineer",
       "Tech Lead",
-      "Node.js Developer", 
-      "React Developer",
+      "Node.js Developer",
+      "NestJS Developer",
+      "TypeScript Developer",
       "Vue.js Developer",
-      "TypeScript",
+      "React Developer",
+      "Backend Engineer",
+      "Frontend Engineer",
+      "PostgreSQL",
       "System Architecture",
-      "Product Development",
+      "Product Engineering",
+      "Technical Leadership",
       "Open to Relocation",
       "Tunisia",
       "Remote Work",
     ],
   },
 
-  // 💼 Elevator Pitch
-  tagline:
-    "I build products from zero to scale. Tech Lead & Full Stack Engineer with 5+ years of experience. Open to relocation worldwide.",
+  // ==================== TAGLINE ====================
 
-  // 📝 Professional Summary
+  tagline:
+    "I build and scale production products end-to-end — from architecture and data models to APIs, frontend, integrations and production support.",
+
+  // ==================== PROFESSIONAL SUMMARY ====================
+
   summary:
-    "I'm a Full Stack Engineer and Tech Lead who owns products end-to-end — from database architecture and system design to deployment and team mentorship. I don't just write code; I build the technical foundation that enables products to scale, teams to move fast, and users to have seamless experiences.\n\n" +
-    "Currently serving as Tech Lead on multiple products: BitBoxGames.tn (booking platform, in-room client app, staff admin console), TAWA Digital Factory (3K+ creators, 100+ campaigns), and previously led the database architecture and technical decisions for ANTS (10K+ students).\n\n" +
-    "I specialize in taking products from zero to production: designing the data model, choosing the right stack, building internal tooling that keeps teams efficient, and ensuring technical decisions align with business outcomes. My core stack includes Node.js, NestJS, Express.js, Vue.js, React, Angular, TypeScript, PostgreSQL, Supabase, and Docker.\n\n" +
-    "🌍 Open to relocation: I'm excited about opportunities in Europe, UAE, Canada, USA, UK, Qatar or remote-first teams. I'm eligible for visa sponsorship and have a 1-month notice period.\n\n" +
-    "Beyond code, I'm passionate about mentoring junior engineers, driving technical decisions that actually ship, and building products that solve real problems.",
+    "I'm a Senior Full Stack Engineer with nearly 6 years of experience building and scaling production platforms — from 0→1 MVPs to systems serving thousands of active users.\n\n" +
+
+    "I work primarily in the Node.js / TypeScript ecosystem with NestJS and Express.js, alongside Vue.js, React and PostgreSQL. I take ownership of features end-to-end: architecture, data models, APIs, frontend, integrations, testing and production support.\n\n" +
+
+    "At TAWA Digital Talents, I work as a Full Stack Engineer and Product Tech Lead on TAWA Digital Factory, a UGC/influencer-marketing platform grown from MVP to 3,000+ creators, 100+ brand clients and 150+ active campaigns across 7+ user roles. I have led major architectural migrations, including Vue 2 → Vue 3, Socket.IO → Firebase and local media storage → Amazon S3.\n\n" +
+
+    "My work has delivered measurable results, including ~80% reduction in manual creator-search time, ~40% faster dashboard load times, up to 3× faster API responses and ~60% lower thumbnail processing/storage overhead.\n\n" +
+
+    "I'm currently working as Product Tech Lead on BitBoxGames.tn, a real-time karaoke venue platform covering public bookings, an in-room client experience and an internal management console.\n\n" +
+
+    "Beyond implementation, I enjoy making architectural decisions, building internal developer tooling, mentoring junior engineers, reviewing code and turning business requirements into reliable technical solutions.\n\n" +
+
+    "🌍 Open to senior Full Stack, Backend or Frontend Engineering opportunities — remote, hybrid or relocation.",
 };
+
+
+// ============================================================
+// EXPERIENCE
+// ============================================================
 
 export const experience = [
   {
     company: "BitBoxGames.tn",
-    role: "Tech Lead & Full Stack Engineer (Freelance)",
-    period: "2025 – Present",
+
+    role: "Product Tech Lead",
+
+    period: "Sept. 2025 – Sept. 2026",
+
     location: "Tunis, Tunisia · Remote",
+
     bullets: [
-      "Led and built BitBoxGames.tn end-to-end as sole engineer and product owner — a karaoke-venue platform covering public booking, in-room client experience, and staff operations.",
-      "Shipped a public multi-step booking wizard on Supabase (Auth, Edge Functions, RLS policies) with slot-blocking logic and Resend-powered booking confirmation emails.",
-      "Built BitBox Karaoke, a real-time in-room client app on Supabase Realtime: session-end countdowns, instant staff-help requests, and in-session coffee ordering.",
-      "Built BitBox Admin, an RBAC-gated internal platform for staff to manage bookings (with filters and confirmations), karaoke rooms, games, and coffee inventory.",
+      "Designed and built the technical architecture across three connected products for a karaoke venue platform: a public booking system, a real-time in-room client app, and an internal management console.",
+
+      "Built the public-facing booking platform using Vue.js and Vite, with Supabase Auth and Row Level Security for client/admin access control.",
+
+      "Implemented backend booking workflows with Supabase Edge Functions, including reservation logic and automated email notifications.",
+
+      "Built the in-room client application with real-time staff-assistance requests and live notifications using Socket.IO.",
+
+      "Implemented song and playlist history tracking, including most-listened rankings to surface popular tracks per room.",
+
+      "Developed real-time countdown and session-timing workflows synchronized between client and staff views.",
+
+      "Built the internal management console for managing rooms, singers, songs, playlists and staff-assistance requests.",
+
+      "Designed RBAC for client/admin roles and dashboards covering room activity and top-played content.",
+    ],
+
+    technologies: [
+      "Vue.js",
+      "Vite",
+      "Supabase",
+      "PostgreSQL",
+      "Socket.IO",
+      "Real-Time Systems",
     ],
   },
+
   {
     company: "TAWA Digital Talents",
+
     role: "Full Stack Engineer · Product Tech Lead",
+
     period: "Sept. 2023 – Present",
+
     location: "Tunis, Tunisia",
+
     bullets: [
-      "Acting product tech lead for TAWA Digital Factory, a UGC platform built from zero to 3K+ creators and 100+ active campaigns across 7+ platform roles, owning architecture and delivery end to end.",
-      "Migrated real-time session and campaign notifications from Socket.io to Firebase, simplifying infrastructure and improving reliability under load.",
-      "Designed a Redis-backed FFmpeg processing queue: watermarking creator video uploads, storing the processed video in S3, then generating and storing thumbnails in S3.",
-      "Integrated third-party Instagram/TikTok data providers to power influencer discovery by performance metrics and category, cutting manual search time by ~80%.",
-      "Built analytics dashboards for campaign and creator performance, and led a separate internal management app for supervising campaigns, payments, creator accounts, feedback, ratings, and workspaces.",
-      "Optimized SQL queries and aggregation pipelines, cutting dashboard load time by 40% and improving analytics response by 3x.",
+      "Full Stack Engineer and Product Tech Lead on TAWA Digital Factory, a UGC/influencer-marketing platform built from 0→1 and now supporting 3,000+ creators, 100+ brand clients and 150+ active campaigns across 7+ distinct user roles.",
+
+      "Own features end-to-end — database, API, frontend and production — using Node.js, TypeScript, NestJS, Vue.js and PostgreSQL, working directly with Product Owners to turn business requirements into technical solutions.",
+
+      "Built an influencer/creator discovery system using Instagram and TikTok data integrations, reducing manual creator-search time by approximately 80%.",
+
+      "Optimized SQL queries, aggregation pipelines and analytics dashboards, reducing dashboard load times by approximately 40% and improving selected API responses by up to 3×.",
+
+      "Implemented RBAC, audit logging and integrations with Instagram/TikTok APIs, Mixpanel and Konnect payments.",
+
+      "Led the Vue 2 → Vue 3 migration, covering Vue Router 4, Pinia and Composition API, while mentoring junior developers through the migration.",
+
+      "Led the Socket.IO → Firebase migration for real-time functionality, simplifying the real-time infrastructure and improving reliability.",
+
+      "Migrated media storage from local servers to Amazon S3, reducing thumbnail processing and storage overhead by approximately 60%.",
+
+      "Designed a Redis-backed FFmpeg processing pipeline for video watermarking, S3 storage and thumbnail generation.",
+
+      "Built analytics dashboards and internal management tools for campaigns, payments, creator accounts, feedback, ratings and workspaces.",
+
+      "Act as a technical decision-maker alongside the CTO, contributing to module and priority decisions, hiring interviews, technical tests and supervision of junior engineers.",
+    ],
+
+    technologies: [
+      "Node.js",
+      "TypeScript",
+      "NestJS",
+      "Vue.js",
+      "PostgreSQL",
+      "Redis",
+      "Firebase",
+      "Amazon S3",
+      "Docker",
+      "CI/CD",
     ],
   },
+
   {
     company: "Aprilium",
-    role: "Full Stack Web Developer",
+
+    role: "Full Stack Engineer",
+
     period: "Sept. 2022 – Sept. 2023",
+
     location: "Tunis, Tunisia",
+
     bullets: [
-      "Led database architecture, feature scope, and technical decisions for ANTS, a multi-platform education system built to serve 10k+ students (React web + React Native mobile).",
-      "Designed scalable REST APIs and MySQL schemas; built 500+ reusable components with consistent cross-platform state.",
-      "Built ANTS Console, an internal RBAC-gated tool for the team to manage and audit database records without writing direct SQL.",
-      "Built ants-cli, a CLI generator that scaffolds NestJS modules (controller/service/module/DTOs) from a schema definition, cutting new-module setup time for the backend team.",
-      "Published @aprilium/antssm_ to npm and adopted it as the shared state-management layer across the ANTS frontend.",
-      "Developed C#.NET internal tools cutting manual data handling by 30%; mentored 3 interns and led API testing (Postman).",
+      "Contributed to ANTS, an education platform serving 10,000+ students across React web and React Native mobile applications.",
+
+      "Led the Spring Boot → NestJS migration, defining the target architecture, module organization, service boundaries and data-access patterns while preserving existing business behavior.",
+
+      "Designed and built a model-driven NestJS module generator and ants-cli, automating boilerplate module creation and accelerating backend development.",
+
+      "Supported 3 junior developers throughout the backend migration through technical guidance and code reviews.",
+
+      "Built and published the @aprilium/antssm npm package and a reusable React state-management package adopted across the ANTS frontend.",
+
+      "Developed REST APIs and RBAC-driven administration features using NestJS, TypeORM and Microsoft SQL Server.",
+
+      "Built ANTS Console, an internal tool allowing the team to manage and audit database records without writing direct SQL.",
+
+      "Tested APIs with Postman and defined expected behaviors and edge cases before QA handoff.",
+
+      "Developed internal C#.NET tools that reduced manual data handling by approximately 30%.",
+    ],
+
+    technologies: [
+      "Node.js",
+      "NestJS",
+      "Spring Boot",
+      "React",
+      "React Native",
+      "TypeScript",
+      "TypeORM",
+      "Microsoft SQL Server",
+      "CLI Development",
     ],
   },
+
   {
     company: "Graphic Arts",
-    role: "IT Manager",
+
+    role: "IT Manager · Technical Consultant",
+
     period: "Feb. 2021 – Apr. 2022",
+
     location: "Tunis, Tunisia",
+
     bullets: [
-      "Supervised 5 engineering graduation projects (PFE), providing technical guidance on architecture, code quality, and delivery.",
-      "Built full-stack inventory management system (Angular, Express, MongoDB) from scratch, replacing a manual spreadsheet process.",
-      "Administered Windows Server infrastructure for 20+ users, maintaining 99% uptime.",
+      "Designed and built a full-stack inventory management system using Angular, Express.js and MongoDB, achieving approximately 99% availability.",
+
+      "Designed the frontend architecture, developed Angular features, integrated REST APIs and provided production support.",
+
+      "Built an internal C#/MySQL tool for managing clients, suppliers, partners and operational follow-up.",
+
+      "Administered Windows Server infrastructure for 20+ users while maintaining approximately 99% uptime.",
+
+      "Supervised 5 PFE graduation projects, providing technical guidance from architecture and implementation through delivery.",
+    ],
+
+    technologies: [
+      "Angular",
+      "TypeScript",
+      "Express.js",
+      "MongoDB",
+      "C#",
+      "MySQL",
+      "REST",
+      "Git",
     ],
   },
+
   {
     company: "Tunisie Telecom",
-    role: "Web Developer Intern",
+
+    role: "Web Developer",
+
     period: "Feb. 2020 – Apr. 2020",
+
     location: "Tunis, Tunisia",
+
     bullets: [
-      "Built two roaming complaint management apps (web + mobile) using Angular, C#, and Firebase within a 3-month Agile sprint.",
+      "Designed and developed two roaming complaint management applications covering web and mobile use cases.",
+
+      "Designed and implemented the application database using Firebase.",
+
+      "Developed a mobile application using Angular, HTML and CSS.",
+
+      "Developed a web application using C# and Visual Studio.",
+
+      "Worked within an Agile/Scrum development process.",
+    ],
+
+    technologies: [
+      "Angular",
+      "C#",
+      "Firebase",
+      "HTML",
+      "CSS",
+      "Agile",
+      "Scrum",
     ],
   },
 ];
 
+
+// ============================================================
+// EDUCATION
+// ============================================================
+
 export const education = [
   {
-    school: "ESPRIT — École Sup. Privée d'Ingénierie et de Technologies",
+    school:
+      "ESPRIT — École Supérieure Privée d'Ingénierie et de Technologies",
+
     degree: "Engineering Degree, Software Engineering",
+
     period: "Sept. 2021 – July 2025",
   },
+
   {
-    school: "ESSECT — École Sup. des Sciences Économiques et Commerciales de Tunis",
-    degree: "Bachelor's, Business Computing — Management Information Systems",
+    school:
+      "ESSECT — École Supérieure des Sciences Économiques et Commerciales de Tunis",
+
+    degree: "Bachelor's Degree, Business Computing — Management Information Systems",
+
     period: "Sept. 2016 – July 2020",
   },
 ];
 
+
+// ============================================================
+// SKILLS
+// ============================================================
+
 export const skills = {
-  Languages: ["JavaScript", "TypeScript", "Java", "Python", "C#", "SQL", "HTML/CSS"],
-  Frameworks: ["Node.js", "NestJS", "Express.js", "Vue.js", "React", "React Native", "Angular", "Spring Boot"],
-  Databases: ["PostgreSQL", "MySQL", "MongoDB", "Supabase", "Firebase", "MSSQL"],
-  Tools: ["Git", "GitLab", "Docker", "Figma", "Redis", "FFmpeg", "AWS S3", "Resend", "Socket.io", "Jira", "Postman"],
+  Languages: [
+    "JavaScript",
+    "TypeScript",
+    "Java",
+    "Python",
+    "C#",
+    "SQL",
+    "HTML/CSS",
+  ],
+
+  Frameworks: [
+    "Node.js",
+    "NestJS",
+    "Express.js",
+    "Vue.js",
+    "React",
+    "React Native",
+    "Angular",
+    "Spring Boot",
+  ],
+
+  Databases: [
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB",
+    "Microsoft SQL Server",
+    "Supabase",
+    "Firebase",
+  ],
+
+  Tools: [
+    "Git",
+    "GitLab",
+    "Docker",
+    "Vite",
+    "Figma",
+    "Redis",
+    "FFmpeg",
+    "Amazon S3",
+    "Resend",
+    "Socket.IO",
+    "Jira",
+    "Postman",
+    "Mixpanel",
+    "Konnect",
+  ],
+
   Practices: [
-    "System Architecture & Tech Leadership",
+    "System Architecture & Technical Leadership",
+    "Product Engineering",
+    "0→1 Product Development",
     "RBAC & Access Control Design",
     "REST API Design",
-    "Real-time Systems (WebSockets/Firebase)",
+    "Real-Time Systems",
+    "Database Architecture & Optimization",
     "CI/CD",
-    "Database Optimization",
+    "Code Review",
+    "Technical Mentoring",
   ],
 };
